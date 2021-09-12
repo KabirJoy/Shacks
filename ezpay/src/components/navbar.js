@@ -11,6 +11,8 @@ const Navbar = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <i class="bi bi-alarm" />
+
         <NavLink className="navbar-brand" to="/">
           MongoDB
         </NavLink>
