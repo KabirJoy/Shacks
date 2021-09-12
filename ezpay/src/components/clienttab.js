@@ -4,6 +4,9 @@ import SignIn from "./signin"
 import SignUp from "./signup"
 import Question1 from "./question1"
 import Question2 from "./question2"
+import Question3 from "./question3"
+import Question4 from "./question4"
+import Question5 from "./question5"
 
 function pageInitial() {
     return "signin"
@@ -44,6 +47,9 @@ function ClientTab() {
             What is your annual income?
             <Question1 selection={selection1} changeSelection={changeSelection1}/>
             <Question2 selection={selection2} changeSelection={changeSelection2} toActivate={selection1==""?false:true} />
+            <Question3 selection={selection3} changeSelection={changeSelection3} toActivate={selection2==""?false:true} />
+            <Question4 selection={selection4} changeSelection={changeSelection4} toActivate={selection3==""?false:true} />
+            <Question5 selection={selection5} changeSelection={changeSelection5} toActivate={selection3==""?false:true} />
         </h3>
         )
     }
