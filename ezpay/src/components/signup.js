@@ -38,10 +38,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
-    width: '100%', // Fix IE 11 issue.
+    width: '100%',
     marginTop: theme.spacing(3),
   },
   submit: {
+    width: '100%',
+    height: '50px',
     margin: theme.spacing(3, 0, 2),
   },
 }));
@@ -61,7 +63,7 @@ export default function SignUp(props) {
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={12}>
               <TextField
                 autoComplete="fname"
                 name="firstName"
@@ -73,7 +75,7 @@ export default function SignUp(props) {
                 autoFocus
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={12}>
               <TextField
                 variant="outlined"
                 required
@@ -124,16 +126,19 @@ export default function SignUp(props) {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={props.goQone}
           >
             Register
           </Button>
-          <Grid container justifyContent="flex-end">
-            <Grid item>
-              <Link href="#" variant="body2" onClick={props.existingAcc}>
-                Already have an account? Sign in
-              </Link>
+          <div>
+            <Grid container justifyContent="flex-end">
+              <Grid item>
+                <Link href="#" variant="body2" onClick={props.existingAcc}>
+                  Already have an account? Sign in
+                </Link>
+              </Grid>
             </Grid>
-          </Grid>
+          </div>
         </form>
       </div>
       <Box mt={5}>

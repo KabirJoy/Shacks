@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../App.css";
 import ClientTab from "./clienttab"
+import Question1 from "./question1"
 
 function Tabs() {
   const [toggleState, setToggleState] = useState(1);
@@ -37,11 +38,6 @@ function Tabs() {
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
           <h2>DB Stuff Here</h2>
-          <hr />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            voluptatum qui adipisci.
-          </p>
         </div>
 
       </div>
