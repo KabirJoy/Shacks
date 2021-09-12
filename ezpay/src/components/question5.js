@@ -1,7 +1,9 @@
 import "./questions.css"
 import { useState } from 'react';
 
-function Question5 ({selection, changeSelection, toActivate}) {
+import Button from '@material-ui/core/Button'
+
+function Question5 ({selection, changeSelection, toActivate, submitt}) {
 
     const [isActive, setIsActive] = useState(false)
     const options = ["Yes", "No"]
@@ -30,6 +32,12 @@ function Question5 ({selection, changeSelection, toActivate}) {
                             </div>
                         )}
                     </div>
+                </div>
+                <div style={{marginTop: "100px", display: 'flex', justifyContent:'center', alignItems:'center'}}>
+                    <Button style={{display: 'flex', justifyContent:'center', alignItems:'center', width: "100%"}} 
+                    variant="contained" color="primary" onClick={submitt}>
+                        Complete Registration
+                    </Button>
                 </div>
             </div>
         )
