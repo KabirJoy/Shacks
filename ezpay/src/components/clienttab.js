@@ -18,6 +18,7 @@ function ClientTab() {
     const [selection2, changeSelection2] = useState("")
     const [selection3, changeSelection3] = useState("")
     const [selection4, changeSelection4] = useState("")
+    const [selection5, changeSelection5] = useState("")
 
     function newAccount() {
         setPage(prevPage => "register")
